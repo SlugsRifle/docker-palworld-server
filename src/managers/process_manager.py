@@ -104,8 +104,8 @@ class ProcessManager(IProcessManager):
             self.server_process = subprocess.Popen(
                 full_cmd,
                 cwd=str(self.server_path),
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE,
+                stdout=None,
+                stderr=None,
                 text=True,
                 start_new_session=True
             )
