@@ -46,8 +46,7 @@ concurrency:
 # Enhanced global environment variables
 env:
     REGISTRY: ghcr.io
-    IMAGE_NAME: ${{ github.repository }}
-    DOCKERHUB_REPO: supersunho/palworld-server
+    IMAGE_NAME: slugsrifle/palworld-server
     DOCKER_BUILDKIT: 1
     BUILDKIT_PROGRESS: plain
     CACHE_VERSION: v1
@@ -252,8 +251,6 @@ jobs:
                   tags: |
                       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ needs.prepare.outputs.build_version_base }}-arm64
                       ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest-arm64
-                      # ${{ env.DOCKERHUB_REPO }}:${{ needs.prepare.outputs.build_version_base }}-arm64
-                      # ${{ env.DOCKERHUB_REPO }}:latest-arm64
                   provenance: false
 
             - name: 🧪 Comprehensive container verification
