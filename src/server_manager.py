@@ -248,8 +248,8 @@ class PalworldServerManager:
 
         # 진행 사항 보기위해 제거
         # commands.append("+quit")
-        
-        success = self.steamcmd_manager.run_command(commands, timeout=1800)
+
+        success = self.steamcmd_manager.run_command(commands, timeout=3600)
         
         if success:
             log_server_event(self.logger, "server_download_complete", 

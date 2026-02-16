@@ -62,7 +62,7 @@ class SteamCMDManager:
  
              result = subprocess.run(
                  full_cmd,
-                 capture_output=True,
+                 capture_output=False,
                  text=True,
                  timeout=timeout,
                  env=env,
