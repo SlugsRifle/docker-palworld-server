@@ -245,7 +245,10 @@ class PalworldServerManager:
         
         if self.config.steamcmd.validate:
             commands.append("validate")
-        commands.append("+quit")
+
+        # 진행 사항 보기위해 제거
+        # commands.append("+quit")
+        
         success = self.steamcmd_manager.run_command(commands, timeout=1800)
         
         if success:
